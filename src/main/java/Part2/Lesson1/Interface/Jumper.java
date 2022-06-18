@@ -1,0 +1,5 @@
+package Part2.Lesson1;
+
+public interface Jump {
+   void jump();
+}
