@@ -4,7 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fdb83c96-2c66-4d1c-a47f-3e98eead6c23" name="Changes" comment="" />
+    <list default="true" id="fdb83c96-2c66-4d1c-a47f-3e98eead6c23" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Part2/Lesson1/Cat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Part2/Lesson1/Human.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Part2/Lesson1/Interface/Jumper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Part2/Lesson1/Interface/Participants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Part2/Lesson1/Interface/Runner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Part2/Lesson1/Obstacle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Part2/Lesson1/Road.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Part2/Lesson1/Robot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Part2/Lesson1/Wall.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Part2/Lesson1/main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Homework1app.class" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,6 +26,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -23,7 +37,17 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="2APNO0DFHJUeQi4gDdliCH5vaoU" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="autoscrollToSource" value="true" />
@@ -39,7 +63,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.main">
     <configuration name="Homework2app" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Homework2app" />
       <module name="GBstudy" />
@@ -49,13 +73,6 @@
     </configuration>
     <configuration name="Homework4app" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Homework4app" />
-      <module name="GBstudy" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Homework6app" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Homework6app" />
       <module name="GBstudy" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -81,13 +98,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Part2.Lesson1.main" />
+      <module name="GBstudy" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Part2.Lesson1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.main" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.Homework2app" />
         <item itemvalue="Application.Homework4app" />
         <item itemvalue="Application.Homework7app" />
-        <item itemvalue="Application.Homework6app" />
       </list>
     </recent_temporary>
   </component>
@@ -101,6 +131,17 @@
       <updated>1654907226557</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
