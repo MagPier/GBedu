@@ -14,9 +14,7 @@ package AlgorithmJava.Lesson1;
 //-----------------------------------------
 
 
-import java.util.Arrays;
-import java.util.Random;
-import java.util.concurrent.atomic.AtomicInteger;
+import java.util.*;
 
 //Задание 1.3
 //Напишите программный код, в котором все данные хранятся только в переменных трех типов данных: Ссылочные, примитивные и своего класса содержащего: конструктор и метод отображения данных.
@@ -30,7 +28,7 @@ public class Lesson1 {
 
 
     public static void main(String[] args) {
-       long timeStart = System.nanoTime();
+        long timeStart = System.nanoTime();
         Lesson1 l1 = new Lesson1();
 
         Employee emp1 = new Employee("Valera", 1, "PR");
@@ -41,7 +39,7 @@ public class Lesson1 {
         Employee emp6 = new Employee("Artem", 6, "IT");
         Employee[] workers = new Employee[]{emp1, emp2, emp3, emp4, emp5, emp6};
 
-        System.out.println("Примитивные тыпы:");
+        System.out.println("Примитивные типы:");
         System.out.println(Arrays.toString(l1.primitive));
         System.out.println("Ссылочные типы:");
         System.out.println(Arrays.toString(l1.text));
@@ -50,8 +48,8 @@ public class Lesson1 {
 //            worker.showInfo();
 //        }
         for (int i = 0; i < workers.length; i++) {
-            if (workers[i].getSalary()>=l1.primitive[i]){
-                System.out.println("Переменная " +i+" меньше зарплаты у");
+            if (workers[i].getSalary() >= l1.primitive[i]) {
+                System.out.println("Переменная " + i + " меньше зарплаты у");
                 workers[i].showInfo();
                 System.out.println();
             }
@@ -59,7 +57,7 @@ public class Lesson1 {
         }
 
         long time = ((System.nanoTime() - timeStart));
-        System.out.println("Время выполнения 1 задания нс: "+ time);
+        System.out.println("Время выполнения 1 задания нс: " + time);
 
 //        Задание 2.1
 //        На основе программного кода из домашнего задания №1 реализуйте массив на основе существующих примитивных или ссылочных типов данных.
@@ -67,12 +65,12 @@ public class Lesson1 {
         long timeStart2 = System.nanoTime();
         int[] primitivePart2 = new int[]{6, 5, 4, 3, 2, 1};
         int[] copyArray = new int[6];
-       copyArray= Arrays.copyOf(primitivePart2,primitivePart2.length);
-       Arrays.sort(copyArray);
-     int find =  Arrays.binarySearch(copyArray,4);
-     System.out.println(find);
+        copyArray = Arrays.copyOf(primitivePart2, primitivePart2.length);
+        Arrays.sort(copyArray);
+        int find = Arrays.binarySearch(copyArray, 4);
+        System.out.println(find);
         long time2 = ((System.nanoTime() - timeStart2));
-        System.out.println("Время выполнения 2.1 задания нс: "+ time2);
+        System.out.println("Время выполнения 2.1 задания нс: " + time2);
 
 //        Задание 2.2
 //        На основе написанного кода в задании 2.1 реализуйте линейный и двоичный поиск.
@@ -81,21 +79,21 @@ public class Lesson1 {
 
         int[] array = new int[400];
         for (int i = 0; i < array.length; i++) {
-            array[i]=i;
+            array[i] = i;
         }
         long timeStart3 = System.nanoTime();
-        int binarySearch = Arrays.binarySearch(array,300);
+        int binarySearch = Arrays.binarySearch(array, 300);
         long time3 = ((System.nanoTime() - timeStart3));
-        System.out.println("Время выполнения бинарного поиска нс: "+ time3);
+        System.out.println("Время выполнения бинарного поиска нс: " + time3);
         long timeStart4 = System.nanoTime();
         int linerSearch;
         for (int i = 0; i < array.length; i++) {
-            if(array[i]==300){
-                linerSearch=i;
+            if (array[i] == 300) {
+                linerSearch = i;
             }
         }
         long time4 = ((System.nanoTime() - timeStart3));
-        System.out.println("Время выполнения линейного поиска нс: "+ time4);
+        System.out.println("Время выполнения линейного поиска нс: " + time4);
 
 
 //        Задание 2.3
@@ -107,16 +105,16 @@ public class Lesson1 {
         Random rnd = new Random();
         for (int i = 1; i < array2.length; i++) {
             int j = rnd.nextInt(i);
-            array2[i] =j;
+            array2[i] = j;
         }
         long timeStart5 = System.nanoTime();
-       int[] array3 = Arrays.copyOf(array2,array2.length);
-        int[] array4 = Arrays.copyOf(array2,array2.length);
-        int[] array5 = Arrays.copyOf(array2,array2.length);
-       Arrays.sort(array3);
-       // System.out.println(Arrays.toString(array3));
+        int[] array3 = Arrays.copyOf(array2, array2.length);
+        int[] array4 = Arrays.copyOf(array2, array2.length);
+        int[] array5 = Arrays.copyOf(array2, array2.length);
+        Arrays.sort(array3);
+        // System.out.println(Arrays.toString(array3));
         long time5 = ((System.nanoTime() - timeStart5));
-        System.out.println("Время выполнения Сортировки нс: "+ time5);
+        System.out.println("Время выполнения Сортировки нс: " + time5);
 //        Задание 2.4
 //        На основе существующего массива данных из задания 2.3 реализуйте алгоритм сортировки пузырьком.
 //        Оцените сортировку с помощью базового класса System.nanoTime().
@@ -133,7 +131,7 @@ public class Lesson1 {
         }
         // System.out.println(Arrays.toString(array2));
         long time6 = ((System.nanoTime() - timeStart6));
-        System.out.println("Время выполнения пузырьковой Сортировки нс: "+ time6);
+        System.out.println("Время выполнения пузырьковой Сортировки нс: " + time6);
 // Сортировка методом Arrays.sort быстрее ~ в 4 раза при 400 элементах.
 
 
@@ -156,9 +154,9 @@ public class Lesson1 {
             array4[pos] = array4[i];
             array4[i] = min;
         }
-       //   System.out.println(Arrays.toString(array4));
+        //   System.out.println(Arrays.toString(array4));
         long time7 = ((System.nanoTime() - timeStart7));
-        System.out.println("Время выполнения Сортировки методом выбора нс: "+ time7);
+        System.out.println("Время выполнения Сортировки методом выбора нс: " + time7);
 
         // веремя сортировки методом выбора в 1.7 раза меньше, чем пузырьковым методом при 400 элементах.
 
@@ -179,12 +177,121 @@ public class Lesson1 {
             }
             array5[i + 1] = value;
         }
-      //  System.out.println(Arrays.toString(array5));
+        //  System.out.println(Arrays.toString(array5));
         long time8 = ((System.nanoTime() - timeStart8));
-        System.out.println("Время выполнения Сортировки методом вставки нс: "+ time8);
+        System.out.println("Время выполнения Сортировки методом вставки нс: " + time8);
         // время выполнения сортировки методов вставки в 2 раза меньше чем сортивкой методом выбоара
 
+//        Задание 3.1
+//        На основе массива из домашнего задания 2.1 реализуйте простой список и коллекцию.
+//                Оцените время выполнения преобразования.
+        long timeStart9 = System.nanoTime();
+        LinkedList list = new LinkedList();
+        for (int i : array5) {
+            list.add(i);
+
+        }
+        System.out.println();
+        long time9 = ((System.nanoTime() - timeStart9));
+        System.out.println("Время выполнения заполнения списка нс: " + time9);
+
+//    Задание 3.4
+//На основе списка из задания 3.1 реализуйте простой двусторонний список и его базовые методы.
+//Реализуйте список заполненный объектами из вашего класса из задания 1.3
+
+        DoublyLinkedList<Employee> dlink = new DoublyLinkedList();
+        for (Employee emp:workers){
+            dlink.add(emp,1);
+        }
+
+//        Задание 3.5
+//        Реализуйте итератор на основе связанных списков из задания 3.4 и выполните базовые операции итератора.
+//                Оцените время выполнения операций с помощью базового метода System.nanoTime()
+//
+      Iterator iter = list.iterator();
+        while (iter.hasNext()){
+            System.out.println(iter.next());
+        }
+
+    }
+}
+
+
+
+class LinkedList<T> implements Iterable<T> {
+
+    private Node<T> head;
+    private Node<T> tail;
+
+    public static <T> LinkedList<T> newEmptyList() {
+        return new LinkedList<T>();
     }
 
+    protected LinkedList() {
+        head = null;
+        tail = null;
+    }
 
+    public void add(T value) {
+        Node<T> node = new Node<>(value);
+        if (tail == null) {
+            head = node;
+        } else {
+            tail.setNext(node);
+        }
+        tail = node;
+    }
+
+    private class ListIterator implements Iterator<T> {
+        private Node<T> currentNode;
+
+        public ListIterator(Node<T> head) {
+            currentNode = head;
+        }
+
+        @Override
+        public boolean hasNext() {
+            return currentNode != null;
+        }
+
+        @Override
+        public T next() {
+            if (currentNode == null) {
+                throw new NoSuchElementException();
+            }
+            T value = currentNode.getValue();
+            currentNode = currentNode.getNext();
+            return value;
+        }
+
+        @Override
+        public void remove() {
+        }
+    }
+
+    @Override
+    public Iterator<T> iterator() {
+        return new ListIterator(head);
+    }
+}
+class Node<T> {
+    private final T value;
+    private Node next;
+
+    public Node(T value) {
+        this.value = value;
+        this.next = null;
+    }
+
+    public T getValue() {
+        return value;
+    }
+
+    public Node getNext() {
+        return next;
+    }
+
+    public void setNext(Node next) {
+        this.next = next;
+    }
 }
