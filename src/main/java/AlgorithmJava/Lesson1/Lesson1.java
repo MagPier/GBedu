@@ -200,18 +200,81 @@ public class Lesson1 {
 //Реализуйте список заполненный объектами из вашего класса из задания 1.3
 
         DoublyLinkedList<Employee> dlink = new DoublyLinkedList();
-        for (Employee emp:workers){
-            dlink.add(emp,1);
+        for (Employee emp : workers) {
+            dlink.add(emp, 1);
         }
+
 
 //        Задание 3.5
 //        Реализуйте итератор на основе связанных списков из задания 3.4 и выполните базовые операции итератора.
 //                Оцените время выполнения операций с помощью базового метода System.nanoTime()
 //
-      Iterator iter = list.iterator();
-        while (iter.hasNext()){
-            System.out.println(iter.next());
+        Iterator iter = list.iterator();
+        while (iter.hasNext()) {
+            System.out.print(iter.next());
         }
+
+//    Задание 4.1
+//    На основе данных объектного списка из задания 3.4 реализуйте простой стек и его базовые методы.
+//    Оцените время выполнения операций с помощью базового метода System.nanoTime().
+        long timeStart10 = System.nanoTime();
+        Stack stack = new Stack(6);
+        for (Employee emp:workers){
+            stack.push(emp.getSalary());
+        }
+        for (int i = 0; i < 5; i++) {
+            stack.pop();
+        }
+        stack.isEmpty();
+
+        long time10 = ((System.nanoTime() - timeStart10));
+        System.out.println("Время выполнения стека нс: " + time10);
+//        Задание 4.2
+//        На основе данных объектного списка из задания 3.4 реализуйте простую очередь и его базовые методы.
+//                Реализуйте вспомогательные методы.
+//        Оцените время выполнения операций с помощью базового метода System.nanoTime().
+        long timeStart11 = System.nanoTime();
+        Queue queue = new Queue(6);
+        for (Employee emp: workers){
+            queue.enqueue(emp.getSalary());
+        }
+        for (int i = 0; i < 6; i++) {
+            System.out.print("front element "+queue.peek()+" ");
+            queue.dequeue();
+        }
+        System.out.println(queue.isEmpty());
+
+        long time11 = ((System.nanoTime() - timeStart11));
+        System.out.println("Время выполнения очереди нс: " + time11);
+//        Задание 4.3
+//        На основе данных объектного списка из задания 3.4 реализуйте простой дек и его базовые методы.
+//                Оцените время выполнения операций с помощью базового метода System.nanoTime().
+        long timeStart12 = System.nanoTime();
+        Dequeue dequeue = new Dequeue(6);
+        for (Employee emp: workers){
+           dequeue.insertrear(emp.getSalary());
+        }
+
+        long time12 = ((System.nanoTime() - timeStart12));
+        System.out.println("Время выполнения дека нс: " + time12);
+//        Задание 4.4
+//        Реализуйте приоритетную очередь на основе ссылочных типов данных, например, integer.
+//        Оцените время выполнения операций с помощью базового метода System.nanoTime().
+        long timeStart13 = System.nanoTime();
+        PriorityQueue priorityQueue = new PriorityQueue();
+        for (String s: l1.text){
+            priorityQueue.add(s);
+        }
+       while (!priorityQueue.isEmpty()){
+           System.out.println(priorityQueue.poll());
+       }
+
+        long time13 = ((System.nanoTime() - timeStart13));
+        System.out.println("Время выполнения приоритетной очереди нс: " + time13);
+
+
+
+
 
     }
 }
